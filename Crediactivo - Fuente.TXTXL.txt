@@ -1,5 +1,5 @@
-Representación Textual del archivo de Excel: "Crediactivo - Archivo de Trabajo Oct-15.xlsm"
-Fecha y hora de generación: 12/09/2016 03:41:11 p.m.
+Representación Textual del archivo de Excel: "Crediactivo - Fuente.xlsm"
+Fecha y hora de generación: 12/09/2016 04:03:30 p.m.
 
 Resumen
 =======
@@ -118,7 +118,7 @@ Contenido:
 [C12] \2\
 [C13] \2\
 [C14] \2\
-[E9] (Monto_Crédito) \=AA_073_CARACTERISTICAS_CREDITO_IMPORTE_NÚMERO_LETRA\
+[E9] (Monto_Crédito) \1000000\
  DataValidation: Decimal. [Operador:"Mayor o igual que" Formula1:"0" ]
  Mensaje=[Mostrar:False Titulo:"CAPTURA" Mensaje:"SOLO EN CASO DE QUE EL MONTO DEL CRÉDITO DESEADO NO /ESTE DENTRO DEL COMBO" ] 
  Advertencia=[Mostrar:True Titulo:"MONTO DE CRÉDITO" Mensaje:"Capture un Importe válido." Estilo:Grave ] 
@@ -144,7 +144,7 @@ Contenido:
 [G13] \Se corto el combo 01/09/15 para llevarlo a la hoja "Captura"\
 [G15] \=IF(Garantía_Hipotecaria=1,"",IF(AND(Garantía_Hipotecaria=2,Simulación_crediactivo=1),"M.N.","USD"))\
 [H7] \Fecha:\
-[I7] \=AA_002_GENERALES_FECHA\
+[I7] \=TODAY()\
 
 [Tabla]
 [A1] \CREDIACTIVO\
@@ -10062,7 +10062,7 @@ Amortización por diferencia\
 [C1] (TipoContrato) \1\
 [C12] \1\
 [C16] \1\
-[C22] (TipoTasa) \1\
+[C22] (TipoTasa) \2\
 
 [Validaciones]
 [A1] \Monto de Crédito\
@@ -10826,7 +10826,7 @@ Amortización por diferencia\
 [A1] \Simulación crediactivo\
 [A2] \1\
 [A3] \2\
-[A5] (Frecuencia) \2\
+[A5] (Frecuencia) \1\
 [A7] \1\
 [A8] \2\
 [A9] \3\
@@ -10913,7 +10913,7 @@ Amortización por diferencia\
 [B33] \=+Garantía_Hipotecaria\
 [B34] \Sin Garantía Hipotecaria\
 [B35] \Con Garantía Hipotecaria\
-[B37] (Com_por_apertura) \=AA_077_CARACTERISTICAS_CREDITO_COMISIÓN_POR_APERTURA\
+[B37] (Com_por_apertura) \0.02\
 [B38] (Com_por_avalúo) \0.003\
 [B39] (Seguro_Anual) \4825.97\
  DataValidation: InputOnly.
@@ -10929,11 +10929,11 @@ Amortización por diferencia\
 
 [B41] (Tipo_de_cambio) \13.1795\
 [B42] (Fecha_Tipo_de_Cambio) \10/03/2014\
-[B43] (Tasa_Anual) \=IF(AA_109_CARACTERISTICAS_CREDITO_TIPO_DE_TASA=1,AA_079_CARACTERISTICAS_CREDITO_PORCENTAJE_DE_INTERÉS_TASA_FIJA,TIIE+B47)\
-[B44] (TIIE) \=AA_107_CARACTERISTICAS_CREDITO_VALOR_DE_TIIE\
-[B45] (Fecha_TIIE) \=AA_108_CARACTERISTICAS_CREDITO_FECHA_DE_TIIE\
+[B43] (Tasa_Anual) \=IF(TipoTasa=1, 15%, TIIE+B47)\
+[B44] (TIIE) \0.038006\
+[B45] (Fecha_TIIE) \10/03/2014\
 [B46] (Márgen) \0\
-[B47] (Tasa_según_rango_y_plazo) \=AA_080_CARACTERISTICAS_CREDITO_DIFERENCIAL_TASA_VARIABLE_TIIE/100\
+[B47] (Tasa_según_rango_y_plazo) \0.11\
 [B48] \Hasta 1 Años\
 [B49] \0.12\
 [Parámetros]
@@ -17189,7 +17189,7 @@ Nombres:
  [Tipo_de_cambio] =Parámetros!$B$41
  [TipoContrato] =Combos!$C$1
  [TipoTasa] =Combos!$C$22
- ['Menu Principal'!UltimaCelda] ='Menu Principal'!$M$36
+ ['Menu Principal'!UltimaCelda] ='Menu Principal'!#REF!
  [Tabla!UltimaCelda] =Tabla!$P$261
  [Valor_Propiedad] ='Menu Principal'!$E$15
 
@@ -19505,5 +19505,5 @@ End Sub
 \\\--- END OF MODULE ---
 
 
-** Fin del proceso de exportación. Proceso realizado en 0.53 minutos. **
+** Fin del proceso de exportación. Proceso realizado en 0.58 minutos. **
 ExportToTxt [ExportToTxt.xls] v3.0.0-SNAPSHOT (Standalone)
